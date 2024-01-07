@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button class="choice-button"onclick=" let compchoice=generateComputerChoice();
+  let usermove='Bat';
+  let result=getResult(usermove,compchoice);
+  showresult(compchoice,usermove,result);">
+  <img src="bat.png" alt="Bat-image" class="choice-image"></button>
+  <button class="choice-button"onclick=" compchoice=generateComputerChoice();
+ usermove='Ball';
+ result=getResult(usermove,compchoice);
+      showresult(compchoice,usermove,result);">
+      <img src="ball.png" alt="Ball-image" class="choice-image"></button>
+  <button class="choice-button"onclick=" compchoice=generateComputerChoice();
+     usermove='Stump';
+     result=getResult(usermove,compchoice);
+     showresult(compchoice,usermove,result);">
+     <img src="stump.png" alt="stump-image" class="choice-image"></button>
+
+  <h3 id="user-move"></h3>
+ <h3 id="computer-move"></h3>
+ <h3 id="result"></h3>
+ <h3 id="score"></h3>
+ <button onclick="localStorage.clear();
+  resetscore(0);
+  ">Reset</button>
+
+  <script src="cricket.js">
+   
+     
+  </script>
+</body>
+</html>
